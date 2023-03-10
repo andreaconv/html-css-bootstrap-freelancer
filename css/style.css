@@ -1,6 +1,41 @@
 .debug{
-  background-color: rgba(173, 216, 230, 0.267);
+  background-color: rgba(241, 49, 49, 0.267);
   border: 1px solid black;
-  min-height: 100px;
+  min-height: 50px;
 }
 
+:root{
+  --blue-dark: #2c3e50;
+  --blue-light: #3a546d;
+  --acqua: #1abc9c;
+}
+
+header{
+  background-color: var(--blue-dark);
+  height: 70px;
+}
+
+section{
+  /* debug */
+  min-height: 200px;
+}
+
+section:nth-child(odd){
+  background-color: var(--acqua);
+}
+
+.accontainer{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top{
+  background-color: var(--blue-light);
+  height: 150px;
+}
+
+.footer-bottom{
+  background-color: var(--blue-dark);
+  height: 70px;
+}
