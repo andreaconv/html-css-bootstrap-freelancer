@@ -39,10 +39,6 @@ section:nth-child(even){
   color: var(--blue-dark);
 }
 
-section:nth-child(even) .line{
-  background-color: #2c3e50;
-}
-
 section .image img{
   border-radius: 20px;
 }
@@ -55,30 +51,77 @@ section:nth-child(even) h2{
   color: var(--black);
 }
 
-section .line{
+section .star{
+  position: relative;
+  font-size: 2rem;
+  margin: 0 1vw;
+}
+
+.star:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
   height: 4px;
   border-radius: 4px;
   background-color: white;
   width: 15vw;
 }
 
-section .star{
-  font-size: 2rem;
-  margin: 0 1vw;
+.star:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  width: 15vw;
+}
+
+.star.dark::before{
+  background-color: var(--blue-dark);
+}
+
+.star.dark::after{
+  background-color: var(--blue-dark);
+}
+
+section .portfolio .image{
+  position: relative;
+}
+
+section .portfolio .image .overlay{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #1abc9cb9;
+}
+
+section .portfolio .image:hover .overlay{
+  display: block;
+  cursor: pointer;
+}
+
+section .portfolio .image .overlay i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5rem;
 }
 
 .ac_container{
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.ac-btn{
-  color: white;
-  border: 1px solid white;
-  font-weight: bold;
-  /* !important prevale su bootstrap  */
-  /* border-radius: 0 !important; */
 }
 
 .ac-form input, 
@@ -98,10 +141,8 @@ section .star{
   color: var(--blue-dark);
 }
 
-.ca-btn{
-  color: white;
+.ac_btn{
   background-color: var(--acqua);
-  font-weight: bold;
 }
 
 /* FOOTER  */
@@ -113,16 +154,8 @@ section .star{
 
 footer .footer_top .social ul li{
   list-style: none;
-  display: inline-block;
-}
-
-footer .footer_top .social ul li a i{
-  color: white;
-  border: 1px solid white;
-  width: 44px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  margin: 0 0.5rem;
+  height: 40px;
+  width: 40px;
 }
 
 footer .footer_top .description span{
