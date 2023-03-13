@@ -89,11 +89,11 @@ section .star{
   background-color: var(--blue-dark);
 }
 
-section .portfolio .image{
+#portfolio .image{
   position: relative;
 }
 
-section .portfolio .image .overlay{
+#portfolio .image .overlay{
   display: none;
   position: absolute;
   top: 0;
@@ -104,12 +104,12 @@ section .portfolio .image .overlay{
   background-color: #1abc9cb9;
 }
 
-section .portfolio .image:hover .overlay{
+#portfolio .image:hover .overlay{
   display: block;
   cursor: pointer;
 }
 
-section .portfolio .image .overlay i{
+#portfolio .image .overlay i{
   position: absolute;
   top: 50%;
   left: 50%;
