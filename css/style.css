@@ -12,16 +12,26 @@ body{
   --blue-light: #3a546d;
   --acqua: #1abc9c;
   --black: #333;
+  --height-header: 60px;
 }
 
 header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
   background-color: var(--blue-dark);
-  height: 70px;
+  height: var(--height-header);
 }
 
 /* SECTION  */
 
-section{
+section::before{
+  content: '';
+  display: block;
+  height: var(--height-header);
+  margin: -var(--height-header) 0 0 ;
 }
 
 section:nth-child(odd){
