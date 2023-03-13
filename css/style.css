@@ -104,12 +104,31 @@ section .star{
   font-weight: bold;
 }
 
+/* FOOTER  */
+
 .footer_top{
+  font-size: 1.3rem;
   background-color: var(--blue-light);
-  height: 150px;
 }
 
-.footer_bottom{
+footer .footer_top .social ul li{
+  list-style: none;
+  display: inline-block;
+}
+
+footer .footer_top .social ul li a i{
+  color: white;
+  border: 1px solid white;
+  width: 44px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+}
+
+footer .footer_top .description span{
+  color: var(--acqua);
+}
+
+footer .footer_bottom{
   background-color: var(--blue-dark);
-  height: 70px;
 }
