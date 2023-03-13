@@ -1,13 +1,19 @@
-.debug{
-  background-color: rgba(241, 49, 49, 0.267);
+/* DEBUG */
+[class^='container'], [class^='col']{
+  background-color: rgba(255, 0, 0, 0.25);
   border: 1px solid black;
   min-height: 50px;
+}
+
+body{
+  color: white;
 }
 
 :root{
   --blue-dark: #2c3e50;
   --blue-light: #3a546d;
   --acqua: #1abc9c;
+  --black: #333;
 }
 
 header{
@@ -24,18 +30,53 @@ section:nth-child(odd){
   background-color: var(--acqua);
 }
 
-.accontainer{
+section:nth-child(even){
+  color: var(--blue-dark);
+}
+
+.ac_container{
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.footer-top{
+.ac-btn{
+  color: white;
+  border: 1px solid white;
+  /* debug */
+  background-color: var(--acqua);
+  /* !important prevale su bootstrap  */
+  /* border-radius: 0 !important; */
+}
+
+.ac-form input, 
+.ac-form textarea{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.ac-form input:focus, 
+.ac-form textarea:focus{
+  box-shadow: 0 1px 0 0 rgba(13, 110, 253, 0.25);
+}
+
+.ac-form ::placeholder{
+  color: var(--blue-dark);
+}
+
+.ca-btn{
+  color: white;
+  background-color: var(--acqua);
+}
+
+.footer_top{
   background-color: var(--blue-light);
   height: 150px;
 }
 
-.footer-bottom{
+.footer_bottom{
   background-color: var(--blue-dark);
   height: 70px;
 }
